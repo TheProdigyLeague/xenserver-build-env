@@ -106,7 +106,7 @@ def main():
 
     # exec "docker run"
     docker_args += [CONTAINER, "/usr/local/bin/init-container.sh"]
-    print >> sys.stderr, "Launching docker with args %s" % docker_args
+    print("Launching docker with args %s" % docker_args, file=sys.stderr)
     return_code = subprocess.call(docker_args)
 
     if srpm_mount_dir:
